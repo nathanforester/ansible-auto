@@ -1,0 +1,33 @@
+---
+- name: Install "nginx" to latest version
+  ansible.builtin.apt:
+    name: nginx
+    state: latest
+
+- name: Delete nginx.conf file
+  shell: rm /etc/nginx/nginx.conf
+
+- name: Create new nginx.conf
+  shell: touch /etc/nginx/nginx.conf
+
+- name: get public ip
+  shell: curl ifconfig.me
+  register: myIP
+
+- name: configure reverse proxy for port 80 access
+  ansible.builtin.blockinfile:
+    path: /etc/nginx/nginx.conf
+    block: |
+      events{}
+
+      http {
+
+          server {
+            listen 80;
+            server_name {{ myIP.stdout }};
+
+            location / {
+                proxy_pass http://127.0.0.1:5000;
+            }
+          }
+      }
