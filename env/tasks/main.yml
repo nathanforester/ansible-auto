@@ -13,5 +13,5 @@
 
 - name: Clone a repo with separate git directory
   ansible.builtin.git:
-    repo: https://github.com/nathanforester/BirthDateAppFlask.git
+    repo: https://github.com/nathanforester/FlaskMovieDB2.git
     dest: /home/ubuntu/myDir/
