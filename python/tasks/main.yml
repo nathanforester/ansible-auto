@@ -25,5 +25,5 @@
   ansible.builtin.pip:
     name: flask
 
-- name: create tables
-  shell: python3 /home/ubuntu/myDir/create.py
+# - name: create tables
+#   shell: python3 /home/ubuntu/myDir/create.py
