@@ -11,6 +11,9 @@
     owner: ubuntu
     group: ubuntu
 
+- name: add safe repo using shell
+  shell: config --global --add safe.directory /home/ubuntu/myDir
+
 - name: Clone a repo with separate git directory
   ansible.builtin.git:
     repo: https://github.com/nathanforester/BirthDateAppFlask.git
