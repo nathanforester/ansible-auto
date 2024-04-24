@@ -23,7 +23,7 @@
 
 - name: install dependencies
   ansible.builtin.pip:
-    requirements: /home/ubuntu/myDir/requirements.txt
+    name: flask
 
 - name: create tables
   shell: python3 /home/ubuntu/myDir/create.py
