@@ -3,21 +3,21 @@
 - name: apt update
   shell: apt update
 
-# - name: clone repo
-#   shell: git clone https://github.com/nathanforester/BirthDateAppFlask.git
+- name: clone repo
+  shell: git clone https://github.com/nathanforester/BirthDateAppFlask.git
 
-- name: Create a directory if it does not exist
-  ansible.builtin.file:
-    path: /home/ubuntu/myDir
-    state: directory
-    mode: '0755'
-    owner: ubuntu
-    group: ubuntu
+# - name: Create a directory if it does not exist
+#   ansible.builtin.file:
+#     path: /home/ubuntu/myDir
+#     state: directory
+#     mode: '0755'
+#     owner: ubuntu
+#     group: ubuntu
 
-- name: add safe repo using shell
-  shell: config --global --add safe.directory /home/ubuntu/myDir
+# - name: add safe repo using shell
+#   shell: config --global --add safe.directory /home/ubuntu/myDir
 
-- name: Clone a repo with separate git directory
-  ansible.builtin.git:
-    repo: https://github.com/nathanforester/BirthDateAppFlask.git
-    dest: /home/ubuntu/myDir/
+# - name: Clone a repo with separate git directory
+#   ansible.builtin.git:
+#     repo: https://github.com/nathanforester/BirthDateAppFlask.git
+#     dest: /home/ubuntu/myDir/
