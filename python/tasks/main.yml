@@ -13,7 +13,7 @@
       [Service]
       Type=simple
       Restart=always
-      ExecStart=/usr/bin/python3 /home/ubuntu/BirthDateAppFlask/app.py
+      ExecStart=/usr/bin/python3 /home/jenkins/BirthDateAppFlask/app.py
       [Install]
       WantedBy=multi-user.target
 
