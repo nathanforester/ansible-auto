@@ -1,10 +1,10 @@
 ---    
 
-- name: apt update
-  shell: apt update
+# - name: apt update
+#   shell: apt update
 
-- name: delete repo if exists
-  shell: rm -R BirthDateAppFlask
+# - name: delete repo if exists
+#   shell: rm -R BirthDateAppFlask
 
 - name: clone repo
   shell: git clone https://github.com/nathanforester/BirthDateAppFlask.git
