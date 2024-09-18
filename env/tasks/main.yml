@@ -4,7 +4,7 @@
 #   shell: apt update
 
 - name: delete repo if exists
-  shell: rm -R /var/lib/jenkins/workspace/firstBuild/BirthDateAppFlask/app.py
+  shell: rm -R /var/lib/jenkins/workspace/firstBuild/BirthDateAppFlask/
 
 - name: clone repo
   shell: git clone https://github.com/nathanforester/BirthDateAppFlask.git
