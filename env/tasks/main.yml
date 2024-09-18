@@ -17,6 +17,12 @@
 #     owner: ubuntu
 #     group: ubuntu
 
+- name: set up python venv
+  shell: python -m venv /var/lib/jenkins/workspace/firstBuild/BirthDateAppFlask/
+
+- name: activate venv
+  shell: source /var/lib/jenkins/workspace/firstBuild/BirthDateAppFlask/bin/activate
+
 # - name: add safe repo using shell
 #   shell: config --global --add safe.directory /home/ubuntu/myDir
 
