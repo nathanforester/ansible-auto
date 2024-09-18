@@ -19,11 +19,14 @@
 
 - name: Install python pip
   ansible.builtin.apt:
-    name: python3-flask
+    name: python3-pip
 
-- name: install dependencies
-  ansible.builtin.pip:
-    name: flask
+# - name: install dependencies
+#   ansible.builtin.pip:
+#     name: flask
+
+- name: install flask
+  shell: python3 -m pip install flask
 
 # - name: create tables
 #   shell: python3 /home/ubuntu/myDir/create.py
