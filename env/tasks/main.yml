@@ -17,6 +17,10 @@
 #     owner: ubuntu
 #     group: ubuntu
 
+- name: Install python venv
+  ansible.builtin.apt:
+    name: python3.12-venv
+
 - name: set up python venv
   shell: python3 -m venv /var/lib/jenkins/workspace/firstBuild/BirthDateAppFlask/
 
