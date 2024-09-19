@@ -6,8 +6,8 @@
 # - name: delete repo if exists
 #   shell: rm -R /var/lib/jenkins/workspace/firstBuild/BirthDateAppFlask/
 
-# - name: clone repo
-#   shell: git clone https://github.com/nathanforester/BirthDateAppFlask.git
+- name: clone repo
+  shell: git clone https://github.com/nathanforester/BirthDateAppFlask.git
 
 # - name: Create a directory if it does not exist
 #   ansible.builtin.file:
