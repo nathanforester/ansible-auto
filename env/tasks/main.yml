@@ -17,9 +17,9 @@
 #     owner: ubuntu
 #     group: ubuntu
 
-- name: Install python venv
-  ansible.builtin.apt:
-    name: python3.12-venv
+# - name: Install python venv
+#   ansible.builtin.apt:
+#     name: python3.12-venv
 
 - name: add safe repo using shell
   shell: config --global --add safe.directory /home/ubuntu/myDir
